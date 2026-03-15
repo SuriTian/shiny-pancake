@@ -1,4 +1,5 @@
 import math
+from rational import *
 
 # Display a matrix
 def display(mat):
@@ -7,14 +8,9 @@ def display(mat):
             print(f"{mat[i][j]} ", end = "")
         print()
 
-sample = [[1, 2, 3]]
-
 # Finding the RREF of an m by n matrix
 def rref(mat):
     m = len(mat)
-    n = len(mat[0])
-    for i in range(2):
-        lst = []
-        for j in range(2):
-            lst.append(i+j)
-        sample.append(lst)
+    n = 0
+    if m > 0:
+        n = len(mat[0])
